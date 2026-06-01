@@ -23,4 +23,26 @@ class Calculadora
     {
         return $a / $b;
     }
+
+ // semana 08
+    public function esPar($numero)
+    {
+        return $numero % 2 == 0;
+    }
+
+    public function esPositivo($numero)
+    {
+        return $numero > 0;
+    }
+
+    public function esNegativo($numero)
+    {
+        return $numero < 0;
+    }
+
+    public function esCero($numero)
+    {
+        return $numero == 0;
+    }
+
 }

@@ -54,4 +54,40 @@ class CalculadoraTest extends TestCase
         // Assert
         $this->assertEquals(5, $resultado);
     }
+
+    // semana 08
+    public function testEsPar()
+    {
+        $calc = new Calculadora();
+
+        $this->assertTrue($calc->esPar(4));
+        $this->assertFalse($calc->esPar(5));
+    }
+
+    public function testEsPositivo()
+    {
+        $calc = new Calculadora();
+
+        $this->assertTrue($calc->esPositivo(10));
+        $this->assertFalse($calc->esPositivo(-5));
+        $this->assertFalse($calc->esPositivo(0));
+    }
+
+    public function testEsNegativo()
+    {
+        $calc = new Calculadora();
+
+        $this->assertTrue($calc->esNegativo(-10));
+        $this->assertFalse($calc->esNegativo(5));
+        $this->assertFalse($calc->esNegativo(0));
+    }
+
+    public function testEsCero()
+    {
+        $calc = new Calculadora();
+
+        $this->assertTrue($calc->esCero(0));
+        $this->assertFalse($calc->esCero(5));
+        $this->assertFalse($calc->esCero(-2));
+    }
 }
